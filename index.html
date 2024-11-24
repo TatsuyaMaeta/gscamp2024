@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>G's ACADEMY Training Camp 2024.11.24</title>
+        <link rel="icon" href="./images/fav_logo.jpg" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/scroll.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <!-- <link rel="stylesheet" href="css/mophing.css" /> -->
+        <link rel="stylesheet" href="css/modal-style.css" />
+    </head>
+    <body>
+        <!-- 簡単に画面いっぱいの縦スクロールページが作れるScrollifyの使い方 -->
+        <!-- https://liginc.co.jp/357738 -->
+
+        <!--header-->
+        <header class="header"></header>
+        <!--//header-->
+
+        <div class="main">
+            <section
+                class="section section-1 js-section"
+                data-section-name="section1"
+            >
+                <div class="section-content">
+                    <div class="title">Why me LT 会</div>
+                    <h3 id="date">2024.11.24</h3>
+                    <p id="myName">前田 達也(まえた たつや)</p>
+                </div>
+            </section>
+
+            <!-- section-first -->
+            <section
+                class="section section-2 js-section"
+                data-section-name="section2"
+            >
+                <div class="section-content">
+                    <h1 class="title">who me?</h1>
+                </div>
+            </section>
+
+            <!-- section-first -->
+            <section
+                class="section section-3 js-section"
+                data-section-name="section3"
+            >
+                <div class="section-content">
+                    <!-- <h2>前田達也(まえたつ)</h2> -->
+                    <div class="img-wrapper relative">
+                        <img
+                            id="img1"
+                            src="./images/profile.jpeg"
+                            alt=""
+                            srcset=""
+                        />
+                        <div id="img-profile" class="absolute">
+                            <table id="prof-table">
+                                <tr>
+                                    <th>氏名</th>
+                                    <td>前田 達也</td>
+                                </tr>
+                                <tr>
+                                    <th>ニックネーム</th>
+                                    <td>まえたつ</td>
+                                </tr>
+                                <tr>
+                                    <th>生まれ / 育ち / 住まい</th>
+                                    <td>鳥取県 / 鳥取県 / 東京都</td>
+                                </tr>
+                                <tr>
+                                    <th>年齢</th>
+                                    <td>38歳 (1986.8.4)</td>
+                                </tr>
+                                <tr>
+                                    <th>趣味</th>
+                                    <td>散歩・ラジオ</td>
+                                </tr>
+                                <tr>
+                                    <th>得意</th>
+                                    <td>大きな声</td>
+                                </tr>
+                                <tr>
+                                    <th>G'sとわたし</th>
+                                    <td>
+                                        TOKYO LAB9期として2020年入学<br />
+                                        入学と共にコロナ渦へ突入<br />
+                                        卒業後チューターを務め<br />
+                                        STAFFとしてジョイン
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>卒業制作</th>
+                                    <td>
+                                        英語学習ARアプリ<br />TARNGO <br />
+                                        <div id="qr-img">
+                                            <img
+                                                src="./images/GGA_DEMO_QR.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>今の役割</th>
+                                    <td>CS(カスタマーサクセス)</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- モチベグラフ -->
+            <!-- section-second -->
+            <section
+                class="section section-4 js-section"
+                data-section-name="section4"
+            >
+                <div class="section-content">
+                    <div class="sub-title">モチベーショングラフ</div>
+                    <div style="padding-top: 20px">
+                        <canvas id="myChart" width="100%" height="50"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- mgram診断結果 -->
+            <section
+                class="section section-5 js-section"
+                data-section-name="section5"
+            >
+                <div class="section-content">
+                    <h2>mgram診断結果</h2>
+                    <div id="mgram-img-wrapper">
+                        <img src="./images/latestMgram.png" alt="" id="img3" />
+                    </div>
+                    <div class="modal">
+                        <button id="js-show-popup" onclick="showDialog()">
+                            過去のまえたつと比較する
+                        </button>
+                        <div class="popup" id="js-popup">
+                            <div class="popup-inner">
+                                <!-- <div class="close-btn" id="js-close-btn">
+                                <i class="fas fa-times"></i>
+                            </div> -->
+                                <div id="modal-wrapper">
+                                    <div class="img-wrap">
+                                        <p>=もうちょっと前=</p>
+                                        <img
+                                            src="./images/past_mgram.png"
+                                            alt=""
+                                            srcset=""
+                                        />
+                                    </div>
+                                    <div class="img-wrap">
+                                        <p>=ちょっと前=</p>
+                                        <img
+                                            src="./images/mgram2021.png"
+                                            alt=""
+                                            srcset=""
+                                        />
+                                    </div>
+                                    <div class="img-wrap">
+                                        <p>=現在=</p>
+                                        <img
+                                            src="./images/latestMgram.png"
+                                            alt=""
+                                            srcset=""
+                                            style="width: 70%"
+                                        />
+                                    </div>
+                                </div>
+                                <!-- <textarea name=""  cols="30" rows="10"></textarea> -->
+                                <!-- <a href="#"
+                    ><img src="./img/popup.jpg" alt="ポップアップ画像"
+                /></a> -->
+                            </div>
+                            <div
+                                class="black-background"
+                                id="js-black-bg"
+                            ></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 幼少期写真 -->
+            <section
+                class="section section-6 js-section"
+                data-section-name="section6"
+            >
+                <div class="section-content">
+                    <div class="sub-title">いろんな写真</div>
+                    <div class="pict-wrapper">
+                        <div class="box">
+                            <img class="gs-logo" src="./images/gロゴ.jpg" />
+                            <img class="myPict" src="./images/prof/A.JPG" />
+                        </div>
+                        <div class="box">
+                            <img class="gs-logo" src="./images/gロゴ.jpg" />
+                            <img class="myPict" src="./images/prof/B.JPG" />
+                        </div>
+                        <div class="box">
+                            <img class="gs-logo" src="./images/gロゴ.jpg" />
+                            <img class="myPict" src="./images/prof/C.JPG" />
+                        </div>
+                    </div>
+                    <div class="pict-wrapper">
+                        <div class="box">
+                            <img class="gs-logo" src="./images/gロゴ.jpg" />
+                            <img class="myPict" src="./images/prof/D.JPG" />
+                        </div>
+                        <div class="box">
+                            <img class="gs-logo" src="./images/gロゴ.jpg" />
+                            <img class="myPict" src="./images/prof/E.jpg" />
+                        </div>
+                        <div class="box">
+                            <img class="gs-logo" src="./images/gロゴ.jpg" />
+                            <img class="myPict" src="./images/prof/F.JPG" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- why me -->
+            <section
+                class="section section-final js-section"
+                data-section-name="section7"
+            >
+                <div class="section-content">
+                    <h1 id="whyme">why me</h1>
+                    <!-- <div class="word">たった一度の人生をどう生きたいのか</div> -->
+                </div>
+            </section>
+
+            <section
+                class="section section-final js-section"
+                data-section-name="section8"
+            >
+                <div class="section-content">
+                    <h1 class="sub-title">たった一度の人生をどう生きたいか</h1>
+                    <div id="whyme1">人を知り、技術と成長する</div>
+                </div>
+            </section>
+
+            <section
+                class="section section-final js-section"
+                data-section-name="section9"
+            >
+                <div class="section-content">
+                    <h1 class="sub-title">その想いや価値観に至った理由</h1>
+                    <div id="whyme2">
+                        人が好き。<br />四人兄弟の六人家族。<br />
+                        生まれた時から常に人がいる生活環境だった。<br />
+                        兄弟が多いこともあり自分の部屋があるわけでなく、<br />
+                        パーソナルスペースに常に誰かがいる生活。<br />
+                        そんな生活が普通だったので、<br />
+                        誰かといるほうが落ち着く性格だった。<br />
+                        鳥取を離れてからも常に誰かと生活を共にしていた。<br />
+                        常に誰かといる環境だった。<br />
+                        誰かといることは苦ではないし、楽しい。<br />
+                        人と関わることが好きなので選んだ仕事も前職は営業職だった。<br />
+                        ジーズ入学以前より技術に興味はあり、<br />
+                        今はエンジニアリングを仕事に活かせていて楽しい<br />
+                        多くの人に触れ、技術とともに成長をしていきたい。
+                    </div>
+                </div>
+            </section>
+            <section
+                class="section section-final js-section"
+                data-section-name="section10"
+            >
+                <div class="section-content">
+                    <h1 class="sub-title">今後やってみたいこと</h1>
+                    <div id="whyme3">
+                        ・プロダクト開発<br />
+                        ・楽器(新規インターフェースの獲得)<br />
+                    </div>
+                </div>
+            </section>
+            <!-- <section
+                class="section section-final js-section"
+                data-section-name="section11"
+            >
+                <div class="section-content">
+                    <h1 class="sub-title">
+                        これからジーズで<br />何を実現したいのか/やりたいのか
+                    </h1>
+                    <div id="whyme4">
+                        組織内心理的安全性の向上<br />
+                        G's完結のエコシステム生成<br />
+                        _UNITの拡充
+                    </div>
+                </div>
+            </section> -->
+            <section
+                class="section section-final js-section"
+                data-section-name="section12"
+            >
+                <div class="section-content">
+                    <div id="whyme5">
+                        <img
+                            src="./images/gsstartup.png"
+                            alt=""
+                            style="width: 90%; margin-top: 60px"
+                        />
+                    </div>
+                </div>
+            </section>
+            <ul class="pager" id="js-pager"></ul>
+        </div>
+
+        <!--footer-->
+        <footer class="footer text-center"></footer>
+        <!--// footer-->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
+
+        <script src="./js/jquery.min.js"></script>
+        <script src="https://cdn.rawgit.com/lukehaas/Scrollify/01cca204/jquery.scrollify.min.js"></script>
+        <script src="./js/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="./js/Chart.js"></script>
+        <script src="./js/modal.js"></script>
+    </body>
+</html>

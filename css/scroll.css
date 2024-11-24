@@ -1,0 +1,88 @@
+.main {
+    position: relative;
+}
+
+.pager {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    padding: 0;
+}
+.pager li {
+    display: block;
+    margin: 20px;
+}
+.pager li a {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+}
+.pager .is-current a {
+    background: #232323;
+}
+
+.section {
+    width: 100%;
+}
+
+.section.is-show .section-content {
+    opacity: 1;
+}
+
+.section-content {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 40px 60px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease 0.75s;
+}
+h1 {
+    font-size: 100px;
+}
+h2 {
+    color: #232323;
+}
+h2:first-child {
+    margin-top: 0;
+}
+
+h3 {
+    color: #232323;
+}
+
+p {
+    color: #232323;
+}
+
+.section-1 {
+    background-color: rgb(8, 166, 234, 0.1);
+    /* #08A6EA; */
+}
+
+.section-2 {
+    background-color: rgb(8, 166, 234, 0.3);
+}
+
+.section-3 {
+    background-color: rgb(8, 166, 234, 0.5);
+}
+
+.section-4 {
+    background-color: rgb(8, 166, 234, 0.6);
+}
+
+.section-5 {
+    background-color: rgb(8, 166, 234, 0.7);
+}
+
+.section-6 {
+    background-color: rgb(8, 166, 234, 0.8);
+}
+
+.section-final {
+    background-color: rgb(8, 166, 234);
+}

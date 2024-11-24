@@ -1,0 +1,219 @@
+html {
+    font-family: AdjustedYuGothic, Yu Gothic, YuGothic, sans-serif;
+}
+
+.title {
+    margin-top: 25%;
+    font-size: 64px;
+}
+.sub-title {
+    font-size: 36px;
+    padding-bottom: 30px;
+}
+#date {
+    padding-top: 30px;
+}
+#myName {
+    padding-top: 30px;
+}
+
+.img-wrapper {
+    margin-top: 34px;
+}
+
+#img1 {
+    width: 75%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+#qr-img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+#qr-img img {
+    width: 100%;
+}
+/* プロフテーブル */
+
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+    right: 13%;
+    top: 5%;
+    width: 40%;
+}
+
+/* https://mogumogu-design.com/make-rounded-table/ */
+table {
+    width: 100%;
+    height: 100%;
+    font-size: 0.9rem;
+    border-collapse: collapse;
+    border: 1px solid #aaa;
+    overflow: hidden;
+    border-spacing: 0;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #aaa;
+}
+
+table tr {
+    border-bottom: solid 2px white;
+}
+
+table tr:last-child {
+    border-bottom: none;
+}
+
+table th {
+    position: relative;
+    text-align: left;
+    width: 35%;
+    background-color: #52c2d0;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+table th:after {
+    display: block;
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: calc(50% - 10px);
+    right: -10px;
+    border-left: 10px solid #52c2d0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+table td {
+    text-align: left;
+    width: 70%;
+    text-align: center;
+    background-color: #eee;
+    padding: 10px 0;
+    line-height: 24px;
+}
+
+/* プロフテーブル */
+#img-profile {
+    font-size: 1vw;
+}
+/* #prof-table td {
+    width: 10px;
+} */
+
+#mgram-img-wrapper {
+    padding-top: 20px;
+    width: 65%;
+    height: 65%;
+    margin: 0 auto;
+}
+#mgram-img-wrapper img {
+    width: 50%;
+}
+
+/* 写真回転 */
+/* https://cotodama.co/hover_switch-photo/ */
+.pict-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 110px;
+}
+.box {
+    width: 250px;
+    height: 250px;
+    margin: 0 20px;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: 1s;
+}
+.box img {
+    position: absolute;
+    /* width: 100%; */
+    backface-visibility: hidden;
+    top: 0;
+    left: 0;
+}
+.box .myPict {
+    width: 100%;
+}
+.box:hover {
+    transform: rotateY(180deg);
+}
+
+/* #lay-pict {
+    width: 150%;
+    margin-right: 350px;
+}
+#lay-pict:hover {
+
+} */
+.box img:last-child {
+    transform: rotateY(180deg);
+}
+.box .myPict {
+    object-fit: cover;
+}
+.gs-logo {
+    width: 250px;
+}
+
+/* modal */
+.img-wrap {
+    width: 1000px;
+}
+.img-wrap img {
+    width: 100%;
+}
+#modal-wrapper {
+    display: flex;
+}
+
+/* whyme */
+#whyme {
+    margin-top: 25%;
+}
+#whyme1 {
+    padding-top: 25%;
+    font-size: 3.3vw;
+    line-height: 1.4em;
+}
+#whyme2 {
+    padding-top: 5%;
+    font-size: 2.5vw;
+    line-height: 1.2em;
+}
+#whyme3 {
+    padding-top: 10%;
+    font-size: 3.3vw;
+    line-height: 1.4em;
+    text-align: left;
+}
+#whyme4 {
+    padding-top: 10%;
+    font-size: 3.3vw;
+    line-height: 1.4em;
+}
+
+#myChart {
+    width: 1860px;
+    margin: 0 auto;
+}
+
+.sub-title {
+    color: #ebebeb;
+}
+
+#whyme,
+#whyme2 {
+    color: #ebebeb;
+}
